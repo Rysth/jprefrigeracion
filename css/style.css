@@ -1,5 +1,5 @@
-@import url('https://fonts.cdnfonts.com/css/cubano');
-@import url('https://fonts.cdnfonts.com/css/montserrat');
+@import url("https://fonts.cdnfonts.com/css/cubano");
+@import url("https://fonts.cdnfonts.com/css/montserrat");
 
 :root {
   --CL-dark-blue: rgb(3, 4, 94);
@@ -228,6 +228,8 @@ main {
 
 .services-content {
   display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: 1fr;
   justify-items: center;
   gap: 1.5rem;
 }
@@ -278,17 +280,16 @@ main {
 }
 
 .contacts-content {
-  display: inherit;
-  flex-direction: column;
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: 1fr;
   gap: 1rem;
   margin-top: 2rem;
 }
 
 .contact-card {
   display: inherit;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  place-content: center;
   background-color: var(--CL-dark-blue);
   border-radius: 0.8rem;
   padding: 2.5rem 2rem;
@@ -376,25 +377,23 @@ main {
     margin-inline: auto;
   }
 
-  .contacts-content {
-    display: inherit;
-    gap: 1rem;
+  .services-content {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
   }
 
-  .contact-card {
-    flex: 1;
+  .contacts-content {
+    display: inherit;
+    place-content: center;
+    gap: 1rem;
   }
 }
 
 @media (min-width: 1000px) {
-  .services-content {
-    grid-template-columns: 1fr 1fr 1fr;
-    place-items: center;
-  }
-
   .contacts-content {
-    display: inherit;
-    flex-direction: row;
-    gap: 1rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
   }
 }
