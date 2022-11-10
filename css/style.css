@@ -149,6 +149,10 @@ header {
   padding-left: 0;
 }
 
+.provitional-navbar ul li {
+  width: 100%;
+}
+
 .provitional-navbar ul li a {
   text-decoration: none;
   font-size: var(--FS-description);
