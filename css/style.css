@@ -317,10 +317,16 @@ main {
   margin: 0;
 }
 
-.contact-card .contact-description {
-  font-family: var(--FF-montserrat);
+.contact-description a{
+  text-decoration: none;
+  color: var(--CL-white);
   font-size: var(--FS-description);
+  font-family: var(--FF-montserrat);
   margin: 0.5rem 0;
+}
+
+.contact-description a:hover{
+  font-weight: bold;
 }
 
 @media (min-width: 800px) {
