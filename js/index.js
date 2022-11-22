@@ -19,7 +19,7 @@ navbarLinks.forEach((link) => {
 });
 
 navbarToggler.addEventListener("click", () => {
-  addNavList();
+  provitionalNavBar.classList.toggle("display-initial");
 });
 
 function addNavList() {

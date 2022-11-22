@@ -14,12 +14,15 @@
   --FS-description: clamp(0.75rem, 0.75rem + 1vw, 1.15rem);
 }
 
-*,
 html {
   font-size: 16px;
   box-sizing: border-box;
-  transition: 0.1s;
   scroll-behavior: smooth;
+}
+
+*, *::after, *::before{
+  box-sizing: inherit;
+  transition: 0.1s;
 }
 
 body {
@@ -127,7 +130,7 @@ header {
 .provitional-navbar {
   position: absolute;
   top: 100%;
-  transform: translateY(2.5%);
+  transform: translateY(3.8%);
   right: 0;
   left: 0;
   background-color: var(--CL-dark-blue);
@@ -140,17 +143,17 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   font-family: var(--FF-montserrat);
   font-weight: bold;
   list-style: none;
   padding: 2rem 0;
-  gap: 5rem;
   padding-left: 0;
+  margin: 0;
 }
 
 .provitional-navbar ul li {
   width: 100%;
+  margin: 1rem 0;
 }
 
 .provitional-navbar ul li a {
@@ -158,6 +161,7 @@ header {
   font-size: var(--FS-description);
   color: var(--CL-white);
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .navbar nav ul li a {
@@ -182,6 +186,7 @@ main {
   flex-direction: column;
 }
 
+
 #home .home-text h1 {
   font-family: var(--FF-cubano);
   letter-spacing: 0.1rem;
@@ -199,9 +204,8 @@ main {
   padding: 0.7rem 2rem;
   font-family: var(--FF-cubano);
   background-color: var(--CL-dark-blue);
-  border: none;
+  border: 1px solid var(--CL-white);;
   border-radius: 2rem;
-  outline: 1px solid var(--CL-white);
   font-size: var(--FS-description) !important;
   max-width: 15rem;
   text-decoration: none;
@@ -240,7 +244,7 @@ main {
 
 .service-card {
   border-radius: 1rem !important;
-  outline: 1px solid var(--CL-dark-blue);
+  border: 1px solid var(--CL-dark-blue);
   width: min(100%, 400px);
 }
 
@@ -348,7 +352,7 @@ main {
   }
 
   #home {
-    display: inherit;
+    display: flex;
     flex-direction: row;
     align-items: center;
     text-align: initial;
